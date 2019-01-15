@@ -12,6 +12,7 @@ import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import scala.concurrent.duration.Duration;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -53,6 +54,7 @@ public class SparkSQLTest {
         rowDataset.registerTempTable("json");
         Dataset<Row> sql = sqlContext.sql("SELECT name, surname FROM json");
         sql.show();
+
 
 //        rowDataset.registerTempTable("test");
 
